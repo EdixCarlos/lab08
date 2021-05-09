@@ -21,6 +21,6 @@ router.get("/api/notes", (_, response) => {
     response.json(notes)
 })
 
-router.post("/api/notes",validationHandler(authSchema, "headers"), crearNota)
+router.post("/api/notes",validationHandler(authSchema, "body"), crearNota)
 
 export default router
